@@ -19,7 +19,7 @@ const About = () => {
             <h2>true.</h2>
           </Hide>
           <p>
-            Contact me for photography ideas that you have. We will make those
+            Contact us for photography ideas that you have. We will make those
             ideas real.
           </p>
           <button>Contact Us</button>
