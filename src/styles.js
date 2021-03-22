@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-//Styled Components
+//Styled Components <-- you can use style.js for universal styled components that are always used.
 export const AboutStyle = styled.div`
   min-height: 90vh;
   display: flex;

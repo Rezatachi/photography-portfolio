@@ -25,11 +25,16 @@ button{
     border: 3px solid #23d997;
     background: transparent;
     color: white;
-    transition: all 0.5s ease;
+    border-radius: 1rem;
+    transition: all 0.4s ease;
     font-family: 'Inter', sans-serif;
+    outline: none;
     &:hover{
         background-color: #23d997;
         color: white;
+    }
+    &:active{
+        background-color: #1b1b1b;
     }
 }
     h2{
