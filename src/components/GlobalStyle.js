@@ -4,7 +4,8 @@ const GlobalStyle = createGlobalStyle`
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+    
 }
 html{
     @media (max-width: 1700px){
@@ -16,6 +17,9 @@ body{
     background: #1b1b1b;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 button{
     font-weight: bold;

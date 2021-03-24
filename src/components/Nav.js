@@ -42,6 +42,7 @@ const StyledNav = styled.nav`
   a {
     color: white;
     text-decoration: none;
+    font-weight: 400;
   }
   ul {
     display: flex;
