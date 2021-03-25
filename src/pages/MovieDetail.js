@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 // We check the path of the informaiton we are on, we then compare it to the url in Moviestate.js. If it matches we make our state to the url in movie state
 import { MovieState } from "../movieState";
+//Framer animation
+import { motion } from "framer-motion";
+import { pageAnimation } from "../Animation";
 const MovieDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
@@ -17,21 +20,24 @@ const MovieDetail = () => {
   return (
     <>
       {movie && (
-        <Details>
-          <Headline>
+        <Details
+          variants={pageAnimation}
+          exit="exit"
+          initial="hidden"
+          animate="show"
+        >
+          <HeadLine>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movies" />
-          </Headline>
+          </HeadLine>
           <Awards>
-            <p>
-              {movie.awards.map((award) => (
-                <Award
-                  title={award.title}
-                  description={award.description}
-                  key={award.title}
-                />
-              ))}
-            </p>
+            {movie.awards.map((award) => (
+              <Award
+                title={award.title}
+                description={award.description}
+                key={award.title}
+              />
+            ))}
           </Awards>
           <ImageDisplay>
             <img src={movie.secondaryImg} alt="movie" />
@@ -42,11 +48,10 @@ const MovieDetail = () => {
   );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
-
-const Headline = styled.div`
+const HeadLine = styled.div`
   min-height: 90vh;
   padding-top: 20vh;
   position: relative;
@@ -62,20 +67,21 @@ const Headline = styled.div`
     object-fit: cover;
   }
 `;
-
 const Awards = styled.div`
   min-height: 80vh;
   display: flex;
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1500px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
-
 const AwardStyle = styled.div`
   padding: 5rem;
-
   h3 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .line {
     width: 100%;
@@ -87,7 +93,6 @@ const AwardStyle = styled.div`
     padding: 2rem 0rem;
   }
 `;
-
 const ImageDisplay = styled.div`
   min-height: 50vh;
   img {

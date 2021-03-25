@@ -73,5 +73,8 @@ const Card = styled.div`
     display: flex;
     align-items: center;
   }
+  h3 {
+    padding-left: 1rem;
+  }
 `;
 export default Service;
