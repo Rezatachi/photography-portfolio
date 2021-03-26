@@ -20,6 +20,7 @@ export const Description = styled.div`
 `;
 export const Image = styled.image`
   flex: 1;
+  z-index: 3;
   overflow: hidden;
   img {
     width: 100%;

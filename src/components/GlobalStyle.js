@@ -66,6 +66,9 @@ button{
         font-size: 1.4rem;
         line-height: 150%;
     }
+    img{
+        border-radius: .5rem;
+    }
 `;
 
 export default GlobalStyle;
