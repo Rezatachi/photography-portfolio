@@ -31,7 +31,9 @@ const About = () => {
             ideas real.
           </motion.p>
           <Link to="/contact">
-            <motion.button variants={fade}>Contact Us</motion.button>
+            <motion.button className="btn" variants={fade}>
+              Contact Us
+            </motion.button>
           </Link>
         </motion.div>
       </Description>
