@@ -1,7 +1,7 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 //Styled Components <-- you can use style.js for universal styled components that are always used.
-export const AboutStyle = styled.div`
+export const AboutStyle = styled(motion.div)`
   min-height: 90vh;
   display: flex;
   justify-content: space-around;
@@ -10,7 +10,7 @@ export const AboutStyle = styled.div`
   color: white;
 `;
 
-export const Description = styled.div`
+export const Description = styled(motion.div)`
   flex: 1;
   padding-right: 5rem;
   z-index: 2;

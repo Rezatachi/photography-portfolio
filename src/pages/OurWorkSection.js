@@ -15,7 +15,12 @@ import {
   slider,
   sliderContainer,
 } from "../Animation";
+
+import { useScroll } from "../components/useScroll";
+
 const OurWork = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
   return (
     // When using styled-components, just change styled.div to styled(motion.div)
     <Work variants={pageAnimation} exit="exit" initial="hidden" animate="show">
@@ -34,7 +39,7 @@ const OurWork = () => {
           </Hide>
         </Link>
       </Movie>
-      <Movie>
+      <Movie ref={element} animate={controls} variants={fade}>
         <h2>The Racer</h2>
         <motion.div variants={lineAnimation} className="line"></motion.div>
         <Link to="/work/the-racer">
@@ -47,7 +52,7 @@ const OurWork = () => {
           </Hide>
         </Link>
       </Movie>
-      <Movie>
+      <Movie ref={element2} animate={controls2} variants={fade}>
         <h2>Good Times</h2>
         <motion.div variants={lineAnimation} className="line"></motion.div>
         <Link to="/work/good-times">
@@ -74,7 +79,7 @@ const Work = styled(motion.div)`
   }
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
@@ -96,17 +101,17 @@ const Hide = styled.div`
 const Frame1 = styled(motion.div)`
   position: fixed;
   left: 0;
-  top: 10%;
+  top: 0;
   width: 100%;
   height: 100vh;
-  background: #fffebf;
+  background: #623cea;
   z-index: 2;
 `;
 const Frame2 = styled(Frame1)`
-  background: #23d997;
+  background: aqua;
 `;
 const Frame3 = styled(Frame1)`
-  background: #1b1b1b;
+  background: #fff;
 `;
 const Frame4 = styled(Frame1)`
   background: #d3d1d4;

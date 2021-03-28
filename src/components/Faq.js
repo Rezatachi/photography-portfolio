@@ -1,42 +1,63 @@
 import React from "react";
 import { AboutStyle } from "../styles";
 import styled from "styled-components";
+import { AnimateSharedLayout } from "framer-motion";
+import { fade } from "../Animation";
+//Reusuable component
+import { useScroll } from "./useScroll";
+import { useAnimation } from "framer-motion";
+import Toggle from "./Toggle";
 const Faq = () => {
+  const [element, controls] = useScroll();
   return (
-    <FaqSec>
+    <FaqSec variants={fade} ref={element} animate={controls}>
       <h2>
         Any questoins <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>Where do I start?</h4>
-        <div className="answer">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-            voluptatibus.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>How do I improve?</h4>
-        <div className="answer">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-            voluptatibus.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Is it easy?</h4>
-        <div className="answer">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-            voluptatibus.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+      <AnimateSharedLayout>
+        <Toggle title="How Do I Start?">
+          <div className="question">
+            <div className="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+                voluptatibus.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro,
+                quos.
+              </p>
+            </div>
+          </div>
+        </Toggle>
+        <Toggle title="How Do I Improve?">
+          <div className="question">
+            <div className="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+                voluptatibus.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro,
+                quos.
+              </p>
+            </div>
+          </div>
+        </Toggle>
+        <Toggle title="Is It Easy?">
+          <div className="question">
+            <div className="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+                voluptatibus.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro,
+                quos.
+              </p>
+            </div>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </FaqSec>
   );
 };

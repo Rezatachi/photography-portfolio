@@ -49,7 +49,7 @@ const StyledNav = styled.nav`
     list-style: none;
   }
   li {
-    padding-left: 5rem;
+    padding-left: 7rem;
     position: relative;
   }
   #logo {
