@@ -9,6 +9,7 @@ import { pageAnimation } from "../Animation";
 const MovieDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
+  // eslint-disable-next-line
   const [movies, setMovies] = useState(MovieState);
   const [movie, setMovie] = useState();
   //Use Effect

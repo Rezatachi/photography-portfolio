@@ -8,11 +8,18 @@ export const AboutStyle = styled(motion.div)`
   align-items: center;
   padding: 4rem 10rem;
   color: white;
+  @media (max-width: 1300px) {
+    display: block;
+    padding: 4rem 2rem;
+    text-align: center;
+    button {
+      margin-bottom: 2rem;
+    }
+  }
 `;
 
 export const Description = styled(motion.div)`
   flex: 1;
-  padding-right: 5rem;
   z-index: 2;
   h2 {
     font-weight: lighter;
@@ -20,12 +27,16 @@ export const Description = styled(motion.div)`
 `;
 export const Image = styled.image`
   flex: 1;
-  z-index: 3;
+  z-index: 5;
   overflow: hidden;
   img {
     width: 100%;
     height: 80vh;
     object-fit: cover;
+  }
+  @media (max-width: 1300px) {
+    width: 65%;
+    height: 40vh;
   }
 `;
 

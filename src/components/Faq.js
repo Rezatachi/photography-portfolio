@@ -5,7 +5,6 @@ import { AnimateSharedLayout } from "framer-motion";
 import { fade } from "../Animation";
 //Reusuable component
 import { useScroll } from "./useScroll";
-import { useAnimation } from "framer-motion";
 import Toggle from "./Toggle";
 const Faq = () => {
   const [element, controls] = useScroll();

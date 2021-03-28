@@ -7,6 +7,7 @@ import AboutSection from "./pages/AboutSection";
 import OurWork from "./pages/OurWorkSection";
 import ContactUs from "./pages/ContactSection";
 import MovieDetail from "./pages/MovieDetail";
+import ScrollTop from "./components/ScrollTop";
 //Router
 import { Switch, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
+      <ScrollTop />
       <Nav />
       <AnimatePresence exitBeforeEnter>
         {/* exitBeforeEnter is kind oflike async */}
