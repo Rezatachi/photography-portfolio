@@ -103,17 +103,17 @@ const Frame1 = styled(motion.div)`
   top: 0;
   width: 100%;
   height: 100vh;
-  background: #623cea;
+  background: #23d997;
   z-index: 2;
 `;
 const Frame2 = styled(Frame1)`
-  background: aqua;
+  background: #282828;
 `;
 const Frame3 = styled(Frame1)`
-  background: #fff;
+  background: #23d997;
 `;
 const Frame4 = styled(Frame1)`
-  background: #d3d1d4;
+  background: #282828;
 `;
 
 export default OurWork;

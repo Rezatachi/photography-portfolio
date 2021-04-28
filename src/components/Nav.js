@@ -19,7 +19,7 @@ const Nav = () => {
           </Link>
           <Line
             transition={{ duration: 0.75 }}
-            initia={{ width: "0%" }}
+            initial={{ width: "0%" }}
             animate={{ width: pathname === "/" ? "50%" : "0" }}
             // Here it is stating that if the pathname is equal to the link we are in, animate it  as the active one.
           />
@@ -31,21 +31,17 @@ const Nav = () => {
           </Link>
           <Line
             transition={{ duration: 0.75 }}
-            initia={{ width: "0%" }}
+            initial={{ width: "0%" }}
             animate={{ width: pathname === "/work" ? "50%" : "0" }}
             // Here it is stating that if the pathname is equal to the link we are in, animate it  as the active one.
           />
         </li>
         <li>
           <Link to="/contact">
-            <a href="/">Contact Us</a>
+            <a href="/" className="contact">
+              Contact Us
+            </a>
           </Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initia={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "50%" : "0" }}
-            // Here it is stating that if the pathname is equal to the link we are in, animate it  as the active one.
-          />
         </li>
       </ul>
     </StyledNav>
@@ -68,6 +64,16 @@ const StyledNav = styled.nav`
     color: white;
     text-decoration: none;
     font-weight: 900;
+  }
+  .contact {
+    padding: 0.5rem;
+    background: #23d997;
+    border-radius: 25px;
+    transition: 0.2s ease-out;
+  }
+  .contact:focus {
+    -webkit-box-shadow: 5px 7px 36px -9px rgba(0, 0, 0, 0.55);
+    box-shadow: 5px 7px 36px -9px rgba(0, 0, 0, 0.55);
   }
   ul {
     display: flex;
